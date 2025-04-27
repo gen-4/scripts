@@ -20,5 +20,6 @@ while IFS= read -r line || [[ -n $line ]]; do
     fi
 
     echo -e "App: $line | Healthcheck: $color$displayIcon$NC"
+    notify-send "App: $line | Healthcheck: $displayIcon"
 
 done < "$file"
